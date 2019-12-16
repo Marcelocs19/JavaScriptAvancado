@@ -12,11 +12,14 @@ class NegociacaoController {
     adiciona(event){
         event.preventDefault();
 
-        let negociacao = new Negociacao(
-            this._inputData.value,
-            this._inputQuantidade.value,
-            this._inputValor.value
-        );
-        console.log(negociacao);        
+        let data = new Date(this._inputData.value.split('-')); // ou new Date(this._inputData.value.replace(/-/g, ',')); trocar o '-' por virgúla. o g é globlal todas as ocorencias daquele caractere
+        console.log(data);
+        
+        // let negociacao = new Negociacao(
+        //     this._inputData.value,
+        //     this._inputQuantidade.value,
+        //     this._inputValor.value
+        // );
+        // console.log(negociacao);        
     }
 }
