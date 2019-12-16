@@ -22,7 +22,7 @@ class NegociacaoController {
                 // }
                 //return item;
             //})
-        ); // Os "..." serem para referenciar as posições do array que o split gera então . = 1, .. = 2 e ... = 3
+        ); // antes do array passado como parâmetro. Cada item do array será passado para cada parâmetro recebido pela função. Inclusive isso vale para o constructor de uma classe.
         let negociacao = new Negociacao(
             data,
             this._inputQuantidade.value,
