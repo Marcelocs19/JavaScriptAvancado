@@ -28,6 +28,10 @@ class NegociacaoController {
             this._inputQuantidade.value,
             this._inputValor.value
         );
-        console.log(negociacao);        
+        console.log(negociacao);  
+        
+        let numeros = [3,2,11,20,8,7];
+        let aux = numeros.map((item) => item * 2);
+        console.log(aux);
     }
 }
