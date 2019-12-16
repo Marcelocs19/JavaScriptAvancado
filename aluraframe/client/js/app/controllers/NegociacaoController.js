@@ -23,7 +23,6 @@ class NegociacaoController {
                 //return item;
             //})
         ); // Os "..." serem para referenciar as posições do array que o split gera então . = 1, .. = 2 e ... = 3
-                
         let negociacao = new Negociacao(
             data,
             this._inputQuantidade.value,
