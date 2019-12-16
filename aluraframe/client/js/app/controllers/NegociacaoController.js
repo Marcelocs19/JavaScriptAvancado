@@ -31,7 +31,7 @@ class NegociacaoController {
         console.log(negociacao);  
         
         let numeros = [3,2,11,20,8,7];
-        let aux = numeros.map((item) => item * 2);
+        let aux = numeros.map(item => item % 2 ? item * 2 : item);
         console.log(aux);
     }
 }
