@@ -29,9 +29,14 @@ class NegociacaoController {
             this._inputValor.value
         );
         console.log(negociacao);  
+
+        let diaMesAno = negociacao.data.getDate() 
+        + '/' + (negociacao.data.getMonth() + 1)
+        + '/' + negociacao.data.getFullYear();
         
-        let numeros = [3,2,11,20,8,7];
-        let aux = numeros.map(item => item % 2 ? item * 2 : item);
-        console.log(aux);
+        //Multiplica os numeros por 2 em que o Modulo deles seja 0
+        // let numeros = [3,2,11,20,8,7];
+        // let aux = numeros.map(item => item % 2 ? item * 2 : item);
+        // console.log(aux);
     }
 }
