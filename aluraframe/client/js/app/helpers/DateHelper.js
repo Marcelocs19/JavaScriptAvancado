@@ -14,4 +14,4 @@ class DateHelper {
         return new Date(...texto.split('-').map((item,indice) => item - indice % 2));
     }
     
-}
+} 

@@ -32,6 +32,7 @@ class NegociacaoController {
         console.log(negociacao);                 
         
         console.log(DateHelper.dataParaTexto(negociacao.data));
+        
         //Multiplica os numeros por 2 em que o Modulo deles seja 0
         // let numeros = [3,2,11,20,8,7];
         // let aux = numeros.map(item => item % 2 ? item * 2 : item);
