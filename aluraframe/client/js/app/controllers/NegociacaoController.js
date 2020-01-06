@@ -7,6 +7,7 @@ class NegociacaoController {
         this._inputData = $("#data");
         this._inputQuantidade = $("#quantidade");
         this._inputValor = $("#valor");
+        this._listaNegociacoes = new ListaNegociacoes();
     }
 
     adiciona(event){
@@ -23,19 +24,28 @@ class NegociacaoController {
         //         return item;
         //     })
         // );  antes do array passado como parâmetro. Cada item do array será passado para cada parâmetro recebido pela função. Inclusive isso vale para o constructor de uma classe.
-
-        let negociacao = new Negociacao(
-            DateHelper.textoParaData(this._inputData.value),
-            this._inputQuantidade.value,
-            this._inputValor.value
-        );
-        console.log(negociacao);                 
-        
-        console.log(DateHelper.dataParaTexto(negociacao.data));
         
         //Multiplica os numeros por 2 em que o Modulo deles seja 0
         // let numeros = [3,2,11,20,8,7];
         // let aux = numeros.map(item => item % 2 ? item * 2 : item);
-        // console.log(aux);
+        // console.log(aux);    
+
+        this._listaNegociacoes.adiciona(this._criaNegociacao());
+        
+        this._limpaFormulario();
+    }
+
+    _criaNegociacao() {
+        return new Negociacao(DateHelper.textoParaData(this._inputData.value),
+                              this._inputQuantidade.value,
+                              this._inputValor.value
+        );        
+    }
+    _limpaFormulario() {
+        this._inputData.value = '';
+        this._inputQuantidade.value = 1;
+        this._inputValor.value = 0.0
+
+        this._inputData.focus();
     }
 }
