@@ -31,12 +31,19 @@ class NegociacoesView {
         
             <tfoot>
                 <td colspan="3"></td>
-                <td>${
-                    (function() {
-                        let total = 0;
-                        model.negociacoes.forEach(n => total += n.volume);
-                        return total;
-                    })()}</td>
+                <td>
+                ${ 
+                    // // função auto invocada
+                    // (function() {
+                    //     let total = 0;
+                    //     model.negociacoes.forEach(n => total += n.volume);
+                    //     return total;
+                    // })() // Quando usamos "()" invocamos a função
+
+                    //nova maneira
+                    model.negociacoes.reduce((total, n) => total + n.volume, 0.0)
+                }
+                </td>
             </tfoot>
         </table>
         `;
